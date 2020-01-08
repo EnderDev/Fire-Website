@@ -1,0 +1,178 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #262626;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(25deg, #f04e33, #c52035);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(25deg, #c52035, #f04e33);
+}
+
+body {
+    background-color: #262626;
+    color: white;
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto", sans-serif;
+}
+
+.fire {
+    background: -webkit-linear-gradient(25deg, #f04e33, #c52035);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
+}
+
+#navbar {
+    border-radius: 0px 0px 15px 15px;
+    background: linear-gradient(25deg, #f04e33, #c52035);
+}
+
+#logo {
+    font-size: 34px;
+}
+
+#logo-img {
+    height: 50px;
+    width: 50px;
+    padding: 0px;
+    margin: 0px;
+}
+
+.nav-link {
+    color: white !important;
+}
+
+.noselect {
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Old versions of Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Opera and Firefox */
+}
+
+#invite-btn {
+    background: #262626;
+    border-radius: 10px;
+    opacity: 90%;
+}
+
+#content-section {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    height: 100%;
+}
+
+#categories {
+    background: #202020;
+    padding: 15px;
+    border-radius: 15px;
+}
+
+#categories-list {
+    width: 100%;
+}
+
+#categories-list li {
+    width: 100%;
+    padding: 5px;
+    margin-top: 5px;
+    text-align: center;
+}
+
+#categories-list li:hover {
+    cursor: pointer;
+    background: linear-gradient(25deg, #f04e33, #c52035);
+    border-radius: 5px;
+}
+
+.table {
+    color: white;
+}
+
+.table-responsive {
+    padding: 15px;
+    border-radius: 15px;
+    background: #303030;
+}
+
+.table-head {
+    background: #202020;
+}
+
+.table-body tr:nth-child(even) {
+    background: #232323;
+}
+
+.c-active {
+    background: linear-gradient(25deg, #f04e33, #c52035);
+    border-radius: 5px;
+}
+
+.cmdName {
+    background: -webkit-linear-gradient(25deg, #f04e33, #c52035);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
+}
+
+.cmdDesc {
+    color: #fff;
+}
+
+.cmdUsage {
+    color: #aaa;
+}
+
+.cmdAliases {
+    color: #aaa;
+}
+
+.stats-prefix {
+    background: -webkit-linear-gradient(25deg, #f04e33, #c52035);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
+}
+
+.bot-info-box {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    background-color: #232323;
+    margin: 10px;
+    padding: 25px;
+    border-radius: 15px;
+}
+
+.bot-info-box span {
+    background: -webkit-linear-gradient(25deg, #f04e33, #c52035);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
+    font-size: 18pt;
+}
+
+.page-footer {
+    background: #171717;
+    border-radius: 15px 15px 0px 0px;
+}
+
+.page-footer strong {
+    background: -webkit-linear-gradient(25deg, #f04e33, #c52035);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
