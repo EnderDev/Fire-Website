@@ -1,13 +1,11 @@
 import React from "react";
 import Head from "../components/head";
 import Nav from "../components/nav";
-import Footer from "../components/footer";
-import fetch from "isomorphic-unfetch";
 
 const HomePage = () => {
     return (
         <div>
-            <Head title={"Stats"} />
+            <Head title={"Home"} />
             <Nav />
 
             <div id="content-section">
@@ -58,7 +56,6 @@ const HomePage = () => {
                     </div>
                 </div>
             </div>
-            <Footer />
         </div>
     );
 };

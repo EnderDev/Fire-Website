@@ -1,7 +1,6 @@
-import React, { useState } from "react";
+import React from "react";
 import Head from "../components/head";
 import Nav from "../components/nav";
-import Footer from "../components/footer";
 import fetch from "isomorphic-unfetch";
 
 const Stats = props => {
@@ -51,7 +50,6 @@ const Stats = props => {
                     </div>
                 </div>
             </div>
-            <Footer />
         </div>
     );
 };

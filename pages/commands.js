@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import Head from "../components/head";
 import Nav from "../components/nav";
-import Footer from "../components/footer";
 import fetch from "isomorphic-unfetch";
 
 const Commands = props => {
@@ -109,7 +108,6 @@ const Commands = props => {
                     </div>
                 </div>
             </div>
-            <Footer />
         </div>
     );
 };

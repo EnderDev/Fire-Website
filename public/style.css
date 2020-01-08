@@ -166,12 +166,15 @@ body {
     font-size: 18pt;
 }
 
-.page-footer {
-    background: #171717;
-    border-radius: 15px 15px 0px 0px;
+.grad-color-text {
+    text-align: center;
+    background-color: #232323;
+    margin: 10px;
+    padding: 15px;
+    border-radius: 15px;
 }
 
-.page-footer strong {
+.grad-color-text strong {
     background: -webkit-linear-gradient(25deg, #f04e33, #c52035);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;

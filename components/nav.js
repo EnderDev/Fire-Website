@@ -35,6 +35,11 @@ const Nav = () => (
                             Support
                         </a>
                     </li>
+                    <li className="nav-item" role="presentation">
+                        <a className="nav-link" href="/about">
+                            About
+                        </a>
+                    </li>
                     <li
                         className="nav-item"
                         role="presentation"
