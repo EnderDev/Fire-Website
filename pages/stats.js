@@ -11,8 +11,8 @@ const Stats = props => {
 
             <div id="content-section">
                 <div className="container text-center">
-                    <div className={"row d-flex justify-content-center"}>
-                        <div className={"col-md-6 "}>
+                    <div className={"row d-flex justify-content-center "}>
+                        <div className={"col-md-6 about-text"}>
                             <h3>
                                 <strong>Bot Statistics</strong>
                             </h3>{" "}
@@ -34,11 +34,11 @@ const Stats = props => {
                             </h4>
                             <h4>
                                 <span className={"stats-prefix"}>Guilds:</span>{" "}
-                                {props.stats.guilds}
+                                {formatNumber(props.stats.guilds)}
                             </h4>
                             <h4>
                                 <span className={"stats-prefix"}>Users:</span>{" "}
-                                {props.stats.users}
+                                {formatNumber(props.stats.users)}
                             </h4>
                             <h4>
                                 <span className={"stats-prefix"}>
@@ -61,5 +61,9 @@ Stats.getInitialProps = async function() {
         stats: data
     };
 };
+
+function formatNumber(x) {
+    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+}
 
 export default Stats;

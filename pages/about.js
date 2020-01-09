@@ -13,9 +13,7 @@ const About = () => {
                     <div className={"row d-flex justify-content-center"}>
                         <div className={"col-md-6"}>
                             <div
-                                className={
-                                    "text-center medium py-2 grad-color-text"
-                                }
+                                className={"text-center medium py-2 about-text"}
                             >
                                 <strong>Fire</strong> is made by{" "}
                                 <strong>Geek#8405.</strong>
