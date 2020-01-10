@@ -8,8 +8,12 @@ const Commands = props => {
     const [currentCategory, changeCategory] = useState(0);
     const router = useRouter();
     var prefix = "$";
-    if (router.query.prefix.length <= 10) {
-        prefix = router.query.prefix;
+    if (router.query.prefix) {
+        if (router.query.prefix.length <= 10) {
+            prefix = router.query.prefix;
+        } else {
+            prefix = "$";
+        }
     } else {
         prefix = "$";
     }
