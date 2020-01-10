@@ -2,9 +2,17 @@ import React, { useState } from "react";
 import Head from "../components/head";
 import Nav from "../components/nav";
 import fetch from "isomorphic-unfetch";
+import { useRouter } from "next/router";
 
 const Commands = props => {
     const [currentCategory, changeCategory] = useState(0);
+    const router = useRouter();
+    var prefix = "$";
+    if (router.query.prefix.length <= 10) {
+        prefix = router.query.prefix;
+    } else {
+        prefix = "$";
+    }
 
     return (
         <div>
@@ -15,10 +23,7 @@ const Commands = props => {
             <div id="content-section">
                 <div className="container text-left">
                     <div className="row">
-                        <div
-                            className="col-md-3"
-                            style={{ marginBottom: 15 + "px" }}
-                        >
+                        <div className="col-md-3">
                             <h3>
                                 <strong>Categories</strong>
                             </h3>
@@ -94,8 +99,13 @@ const Commands = props => {
                                                                         : ""
                                                                 }
                                                             >
-                                                                {" "}
-                                                                {field}{" "}
+                                                                {commandFields[2] !=
+                                                                field
+                                                                    ? field
+                                                                    : field.replace(
+                                                                          "{prefix}",
+                                                                          prefix
+                                                                      )}
                                                             </td>
                                                         )
                                                     )}
