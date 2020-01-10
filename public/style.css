@@ -86,32 +86,30 @@ body {
 
 #categories-list {
     width: 100%;
+    margin: 0;
 }
 
 @media (max-width: 768px) {
     #categories-list {
-        -moz-column-count: 2;
-        -moz-column-gap: 20px;
-        -webkit-column-count: 2;
-        -webkit-column-gap: 20px;
-        column-count: 2;
-        column-gap: 20px;
+        columns: 2;
     }
 }
 
 #categories-list li {
     width: 100%;
     padding: 5px;
-    margin-top: 5px;
+    margin: 5px;
     text-align: center;
     background: #262626;
     border-radius: 5px;
+    display: inline-block;
+    margin-bottom: 3px;
+    margin-top: 3px;
 }
 
 #categories-list li:hover {
     cursor: pointer;
     background: linear-gradient(25deg, #f04e33, #c52035);
-    border-radius: 5px;
 }
 
 .table {
@@ -133,8 +131,7 @@ body {
 }
 
 .c-active {
-    background: linear-gradient(25deg, #f04e33, #c52035);
-    border-radius: 5px;
+    background: linear-gradient(25deg, #f04e33, #c52035) !important;
 }
 
 .cmdName {
