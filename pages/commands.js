@@ -31,6 +31,9 @@ const Commands = props => {
                             <h3>
                                 <strong>Categories</strong>
                             </h3>
+                            <p className={"category-note"}>
+                                {props.categories[currentCategory].Note}
+                            </p>
 
                             <div id="categories">
                                 <ul
@@ -54,70 +57,139 @@ const Commands = props => {
                                 </ul>
                             </div>
                         </div>
-
                         <div className="col-md-9">
-                            <h3>
-                                <strong>Commands</strong>
-                            </h3>
-                            <div
-                                className="table-responsive"
-                                style={{ paddingBottom: "0px" }}
-                            >
-                                <table className="table table-striped">
-                                    <thead className="table-head">
-                                        <tr>
-                                            <th>Name</th>
-                                            <th>Description</th>
-                                            <th>Usage</th>
-                                            <th>Aliases</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody className="table-body">
-                                        {Object.entries(
-                                            props.categories[currentCategory]
-                                                .commands
-                                        )
-                                            .map(([name, obj]) => [
-                                                name,
-                                                ...Object.values(obj)
-                                            ])
-                                            .map(commandFields => (
-                                                <tr key={commandFields[0]}>
-                                                    {commandFields.map(
-                                                        field => (
-                                                            <td
-                                                                key={field}
-                                                                className={
-                                                                    commandFields[0] ==
+                            <div className="row">
+                                <h3>
+                                    <strong>Commands</strong>
+                                </h3>
+                                <div
+                                    className="table-responsive"
+                                    style={{ paddingBottom: "0px" }}
+                                >
+                                    <table className="table table-striped">
+                                        <thead className="table-head">
+                                            <tr>
+                                                <th>Name</th>
+                                                <th>Description</th>
+                                                <th>Usage</th>
+                                                <th>Aliases</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody className="table-body">
+                                            {Object.entries(
+                                                props.categories[
+                                                    currentCategory
+                                                ].commands
+                                            )
+                                                .map(([name, obj]) => [
+                                                    name,
+                                                    ...Object.values(obj)
+                                                ])
+                                                .map(commandFields => (
+                                                    <tr key={commandFields[0]}>
+                                                        {commandFields.map(
+                                                            field => (
+                                                                <td
+                                                                    key={field}
+                                                                    className={
+                                                                        commandFields[0] ==
+                                                                        field
+                                                                            ? "name"
+                                                                            : commandFields[1] ==
+                                                                              field
+                                                                            ? "desc"
+                                                                            : commandFields[2] ==
+                                                                              field
+                                                                            ? "usage"
+                                                                            : commandFields[3] ==
+                                                                              field
+                                                                            ? "aliases"
+                                                                            : ""
+                                                                    }
+                                                                >
+                                                                    {commandFields[2] !=
                                                                     field
-                                                                        ? "cmdName"
-                                                                        : commandFields[1] ==
-                                                                          field
-                                                                        ? "cmdDesc"
-                                                                        : commandFields[2] ==
-                                                                          field
-                                                                        ? "cmdUsage"
-                                                                        : commandFields[3] ==
-                                                                          field
-                                                                        ? "cmdAliases"
-                                                                        : ""
-                                                                }
-                                                            >
-                                                                {commandFields[2] !=
-                                                                field
-                                                                    ? field
-                                                                    : field.replace(
-                                                                          "{prefix}",
-                                                                          prefix
-                                                                      )}
-                                                            </td>
-                                                        )
-                                                    )}
-                                                </tr>
-                                            ))}
-                                    </tbody>
-                                </table>
+                                                                        ? field
+                                                                        : field.replace(
+                                                                              "{prefix}",
+                                                                              prefix
+                                                                          )}
+                                                                </td>
+                                                            )
+                                                        )}
+                                                    </tr>
+                                                ))}
+                                        </tbody>
+                                    </table>
+                                </div>
                             </div>
+                            <br />
+
+                            {props.categories[currentCategory].flags ? (
+                                <div className="row">
+                                    <h3>
+                                        <strong>Flags</strong>
+                                    </h3>
+                                    <div
+                                        className="table-responsive"
+                                        style={{ paddingBottom: "0px" }}
+                                    >
+                                        <table className="table table-striped">
+                                            <thead className="table-head">
+                                                <tr>
+                                                    <th>Name</th>
+                                                    <th>Description</th>
+                                                    <th>Usage</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody className="table-body">
+                                                {Object.entries(
+                                                    props.categories[
+                                                        currentCategory
+                                                    ].flags
+                                                )
+                                                    .map(([name, obj]) => [
+                                                        name,
+                                                        ...Object.values(obj)
+                                                    ])
+                                                    .map(commandFields => (
+                                                        <tr
+                                                            key={
+                                                                commandFields[0]
+                                                            }
+                                                        >
+                                                            {commandFields.map(
+                                                                field => (
+                                                                    <td
+                                                                        key={
+                                                                            field
+                                                                        }
+                                                                        className={
+                                                                            commandFields[0] ==
+                                                                            field
+                                                                                ? "name"
+                                                                                : commandFields[1] ==
+                                                                                  field
+                                                                                ? "desc"
+                                                                                : commandFields[2] ==
+                                                                                  field
+                                                                                ? "usage"
+                                                                                : ""
+                                                                        }
+                                                                    >
+                                                                        {field}
+                                                                    </td>
+                                                                )
+                                                            )}
+                                                        </tr>
+                                                    ))}
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            ) : (
+                                ""
+                            )}
                         </div>
                     </div>
                 </div>

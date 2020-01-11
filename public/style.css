@@ -95,6 +95,10 @@ body {
     }
 }
 
+.category-note {
+    color: #aaa;
+}
+
 #categories-list li {
     width: 100%;
     padding: 5px;
@@ -133,22 +137,22 @@ body {
     background: linear-gradient(25deg, #f04e33, #c52035) !important;
 }
 
-.cmdName {
+.name {
     background: -webkit-linear-gradient(25deg, #f04e33, #c52035);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-weight: bold;
 }
 
-.cmdDesc {
+.desc {
     color: #fff;
 }
 
-.cmdUsage {
+.usage {
     color: #aaa;
 }
 
-.cmdAliases {
+.aliases {
     color: #aaa;
 }
 
