@@ -2,7 +2,7 @@ import React from "react";
 import Head from "../components/head";
 import Nav from "../components/nav";
 
-const HomePage = () => {
+const Home = () => {
     return (
         <div>
             <Head title={"Home"} />
@@ -26,8 +26,8 @@ const HomePage = () => {
                             <p>
                                 <span>Music</span>
                                 <br />
-                                Fire can join your voice channel and play
-                                some music from YouTube. With an intuitive music
+                                Fire can join your voice channel and play some
+                                music from YouTube. With an intuitive music
                                 controller, it's easy to change the volume, skip
                                 song or even repeat a song!
                             </p>
@@ -60,4 +60,4 @@ const HomePage = () => {
     );
 };
 
-export default HomePage;
+export default Home;

@@ -124,7 +124,6 @@ const Commands = props => {
                                 </div>
                             </div>
                             <br />
-
                             {props.categories[currentCategory].flags ? (
                                 <div className="row">
                                     <h3>
