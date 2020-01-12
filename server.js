@@ -19,14 +19,6 @@ app.prepare().then(() => {
         return app.render(req, res, "/about", req.query);
     });
 
-    server.get("/dashboard/", checkAuth, function(req, res) {
-        return app.render(req, res, "/dashboard", req.query, req.user);
-    });
-
-    server.get("/dashboard/guild/:id", (req, res) => {
-        return app.render(req, res, "/dashboard/guild/", { id: req.params.id });
-    });
-
     server.all("*", (req, res) => {
         return handle(req, res);
     });
