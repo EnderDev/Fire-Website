@@ -87,36 +87,43 @@ const Commands = props => {
                                                 ])
                                                 .map(commandFields => (
                                                     <tr key={commandFields[0]}>
-                                                        {commandFields.map(
-                                                            field => (
-                                                                <td
-                                                                    key={field}
-                                                                    className={
-                                                                        commandFields[0] ==
-                                                                        field
-                                                                            ? "name"
-                                                                            : commandFields[1] ==
-                                                                              field
-                                                                            ? "desc"
-                                                                            : commandFields[2] ==
-                                                                              field
-                                                                            ? "usage"
-                                                                            : commandFields[3] ==
-                                                                              field
-                                                                            ? "aliases"
-                                                                            : ""
-                                                                    }
-                                                                >
-                                                                    {commandFields[2] !=
-                                                                    field
-                                                                        ? field
-                                                                        : field.replace(
-                                                                              "{prefix}",
-                                                                              prefix
-                                                                          )}
-                                                                </td>
-                                                            )
-                                                        )}
+                                                        <td
+                                                            key={
+                                                                commandFields[0]
+                                                            }
+                                                            className={"name"}
+                                                        >
+                                                            {commandFields[0]}
+                                                        </td>
+                                                        <td
+                                                            key={
+                                                                commandFields[1]
+                                                            }
+                                                            className={"desc"}
+                                                        >
+                                                            {commandFields[1]}
+                                                        </td>
+                                                        <td
+                                                            key={
+                                                                commandFields[2]
+                                                            }
+                                                            className={"usage"}
+                                                        >
+                                                            {commandFields[2].replace(
+                                                                "{prefix}",
+                                                                prefix
+                                                            )}
+                                                        </td>
+                                                        <td
+                                                            key={
+                                                                commandFields[3]
+                                                            }
+                                                            className={
+                                                                "aliases"
+                                                            }
+                                                        >
+                                                            {commandFields[3]}
+                                                        </td>
                                                     </tr>
                                                 ))}
                                         </tbody>
@@ -164,13 +171,13 @@ const Commands = props => {
                                                                             field
                                                                         }
                                                                         className={
-                                                                            commandFields[0] ==
+                                                                            commandFields[0] ===
                                                                             field
                                                                                 ? "name"
-                                                                                : commandFields[1] ==
+                                                                                : commandFields[1] ===
                                                                                   field
                                                                                 ? "desc"
-                                                                                : commandFields[2] ==
+                                                                                : commandFields[2] ===
                                                                                   field
                                                                                 ? "usage"
                                                                                 : ""
