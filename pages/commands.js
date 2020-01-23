@@ -56,79 +56,66 @@ const Commands = props => {
                                     ))}
                                 </ul>
                             </div>
+                            <br />
                         </div>
+
                         <div className="col-md-9">
                             <div className="row">
                                 <h3>
                                     <strong>Commands</strong>
                                 </h3>
-                                <div
-                                    className="table-responsive"
-                                    style={{ paddingBottom: "0px" }}
-                                >
-                                    <table className="table table-striped">
-                                        <thead className="table-head">
-                                            <tr>
-                                                <th>Name</th>
-                                                <th>Description</th>
-                                                <th>Usage</th>
-                                                <th>Aliases</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody className="table-body">
-                                            {Object.entries(
-                                                props.categories[
-                                                    currentCategory
-                                                ].commands
-                                            )
-                                                .map(([name, obj]) => [
-                                                    name,
-                                                    ...Object.values(obj)
-                                                ])
-                                                .map(commandFields => (
-                                                    <tr key={commandFields[0]}>
-                                                        <td
-                                                            key={
-                                                                commandFields[0]
-                                                            }
-                                                            className={"name"}
-                                                        >
-                                                            {commandFields[0]}
-                                                        </td>
-                                                        <td
-                                                            key={
-                                                                commandFields[1]
-                                                            }
-                                                            className={"desc"}
-                                                        >
-                                                            {commandFields[1]}
-                                                        </td>
-                                                        <td
-                                                            key={
-                                                                commandFields[2]
-                                                            }
-                                                            className={"usage"}
-                                                        >
-                                                            {commandFields[2].replace(
-                                                                "{prefix}",
-                                                                prefix
-                                                            )}
-                                                        </td>
-                                                        <td
-                                                            key={
-                                                                commandFields[3]
-                                                            }
-                                                            className={
-                                                                "aliases"
-                                                            }
-                                                        >
-                                                            {commandFields[3]}
-                                                        </td>
-                                                    </tr>
-                                                ))}
-                                        </tbody>
-                                    </table>
-                                </div>
+
+                                <table className="table ">
+                                    <thead className="table-head">
+                                        <tr>
+                                            <th>Name</th>
+                                            <th>Description</th>
+                                            <th>Usage</th>
+                                            <th>Aliases</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody className="table-body">
+                                        {Object.entries(
+                                            props.categories[currentCategory]
+                                                .commands
+                                        )
+                                            .map(([name, obj]) => [
+                                                name,
+                                                ...Object.values(obj)
+                                            ])
+                                            .map(commandFields => (
+                                                <tr key={commandFields[0]}>
+                                                    <td
+                                                        key={commandFields[0]}
+                                                        className={"name"}
+                                                    >
+                                                        {commandFields[0]}
+                                                    </td>
+                                                    <td
+                                                        key={commandFields[1]}
+                                                        className={"desc"}
+                                                    >
+                                                        {commandFields[1]}
+                                                    </td>
+                                                    <td
+                                                        key={commandFields[2]}
+                                                        className={"usage"}
+                                                    >
+                                                        {commandFields[2].replace(
+                                                            "{prefix}",
+                                                            prefix
+                                                        )}
+                                                    </td>
+                                                    <td
+                                                        key={commandFields[3]}
+                                                        className={"aliases"}
+                                                    >
+                                                        {commandFields[3]}
+                                                    </td>
+                                                </tr>
+                                            ))}
+                                    </tbody>
+                                </table>
                             </div>
                             <br />
                             {props.categories[currentCategory].flags ? (

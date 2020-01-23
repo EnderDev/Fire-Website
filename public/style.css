@@ -20,7 +20,7 @@
 }
 
 body {
-    background-color: #262626;
+    background-color: #202020;
     color: white;
     margin: 0;
     padding: 0;
@@ -64,7 +64,7 @@ body {
 }
 
 #invite-btn {
-    background: #262626;
+    background: #151515;
     border-radius: 10px;
     opacity: 90%;
     width: 75px;
@@ -78,9 +78,8 @@ body {
 }
 
 #categories {
-    background: #202020;
+    background: #151515;
     padding: 15px;
-    border-radius: 15px;
 }
 
 #categories-list {
@@ -102,8 +101,7 @@ body {
     width: 100%;
     padding: 5px;
     text-align: center;
-    background: #262626;
-    border-radius: 5px;
+    background: #181818;
     display: inline-block;
     margin-bottom: 3px;
     margin-top: 3px;
@@ -114,22 +112,32 @@ body {
     background: linear-gradient(25deg, #f04e33, #c52035);
 }
 
+table {
+    table-layout: fixed;
+}
+
 .table {
     color: white;
 }
 
-.table-responsive {
-    padding: 15px;
-    border-radius: 15px;
-    background: #303030;
-}
-
 .table-head {
-    background: #202020;
+    background: #151515;
 }
 
 .table-body tr:nth-child(even) {
-    background: #232323;
+    background: #171717;
+}
+
+.table-body tr:nth-child(odd) {
+    background: #191919;
+}
+
+.table thead th {
+    border: none;
+}
+
+.table td {
+    border: none;
 }
 
 .c-active {
@@ -169,7 +177,6 @@ body {
     background-color: #232323;
     margin: 10px;
     padding: 25px;
-    border-radius: 15px;
 }
 
 .bot-info-box span {
@@ -185,7 +192,6 @@ body {
     background-color: #232323;
     margin: 10px;
     padding: 15px;
-    border-radius: 15px;
 }
 
 .about-text strong {
