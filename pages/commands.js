@@ -65,7 +65,7 @@ const Commands = props => {
                                     <strong>Commands</strong>
                                 </h3>
 
-                                <table className="table ">
+                                <table className="table">
                                     <thead className="table-head">
                                         <tr>
                                             <th>Name</th>

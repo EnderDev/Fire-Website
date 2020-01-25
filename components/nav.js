@@ -1,6 +1,7 @@
 import React from "react";
 import "../public/style.css";
-const Nav = () => (
+import cookies from "next-cookies";
+const Nav = props => (
     <nav className="navbar navbar-dark navbar-expand-md" id="navbar">
         <div className="container">
             <a
@@ -45,17 +46,36 @@ const Nav = () => (
                         role="presentation"
                         id="invite-btn"
                     >
-                        <a
-                            className="nav-link active"
-                            href="https://inv.wtf/fire"
-                        >
-                            <i className="fab fa-discord"></i>&nbsp;Invite
-                        </a>
+                        {props.logged_in === true ? (
+                            <a className="nav-link active" href="/dashboard">
+                                Dashboard
+                            </a>
+                        ) : (
+                            <a className="nav-link active" href="/login">
+                                Login
+                            </a>
+                        )}
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
 );
+
+Nav.getInitialProps = async function(ctx) {
+    const { user_id } = cookies(ctx);
+
+    if (user_id === null && user_id === undefined) {
+        return {
+            logged_in: false
+        };
+    } else {
+        return {
+            user_id: user_id,
+
+            logged_in: true
+        };
+    }
+};
 
 export default Nav;

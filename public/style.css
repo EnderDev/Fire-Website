@@ -67,13 +67,11 @@ body {
     background: #151515;
     border-radius: 10px;
     opacity: 90%;
-    width: 75px;
     text-align: center;
 }
 
 #content-section {
-    padding-top: 15px;
-    padding-bottom: 15px;
+    padding: 15px;
     height: 100%;
 }
 
@@ -118,6 +116,7 @@ table {
 
 .table {
     color: white;
+    margin-bottom: 0;
 }
 
 .table-head {
@@ -174,7 +173,7 @@ table {
     text-align: center;
     display: flex;
     justify-content: center;
-    background-color: #232323;
+    background-color: #151515;
     margin: 10px;
     padding: 25px;
 }
@@ -187,10 +186,24 @@ table {
     font-size: 18pt;
 }
 
+.card {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    background-color: #151515;
+    padding: 15px;
+}
+
+.card span {
+    background: -webkit-linear-gradient(25deg, #f04e33, #c52035);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
+}
+
 .about-text {
     text-align: center;
-    background-color: #232323;
-    margin: 10px;
+    background-color: #151515;
     padding: 15px;
 }
 
@@ -198,4 +211,52 @@ table {
     background: -webkit-linear-gradient(25deg, #f04e33, #c52035);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+}
+
+.progress-bar {
+    background: -webkit-linear-gradient(25deg, #f04e33, #c52035);
+}
+
+.progress {
+    background: #202020;
+}
+
+.last-members {
+    text-align: center;
+    padding: 15px;
+}
+
+.tbl-grey-text {
+    color: #aaa;
+}
+
+.custom-buttons {
+    list-style: none;
+    text-align: center;
+    padding: 0px;
+}
+
+.custom-button {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin: 10px;
+    background: #202020;
+}
+
+.custom-button:hover {
+    background: -webkit-linear-gradient(25deg, #f04e33, #c52035);
+}
+
+.custom-buttons a {
+    color: #fff;
+}
+
+.custom-buttons a:hover {
+    text-decoration: none;
+}
+
+.user-icon {
+    height: 25px;
+    margin-right: 5px;
+    border-radius: 50%;
 }
