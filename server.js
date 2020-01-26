@@ -12,6 +12,7 @@ server.use(cookieParser());
 
 app.prepare().then(() => {
     server.get("/login", (req, res) => {
+        if (req.cookies.access_token) res.redirect("/dashboard");
         res.redirect(
             `https://discordapp.com/oauth2/authorize?client_id=605062449363943426&redirect_uri=https://fire.gaminggeek.space/dashboard/login&response_type=code&scope=identify%20email%20guilds%20guilds.join`
         );
