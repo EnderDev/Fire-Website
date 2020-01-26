@@ -48,6 +48,7 @@ app.prepare().then(() => {
             `https://api.gaminggeek.dev/oauth/@me/${token.access_token}`
         );
         const userData = await userFetch.json();
+        if (userData.guilds === null) res.redirect("https://inv.wtf/fire");
         res.cookie("access_token", token.access_token);
         res.cookie("user_id", userData.user.id);
 
