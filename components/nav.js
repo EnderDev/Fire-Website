@@ -45,36 +45,14 @@ const Nav = props => (
                         role="presentation"
                         id="invite-btn"
                     >
-                        {props.logged_in === true ? (
-                            <a className="nav-link active" href="/dashboard">
-                                Dashboard
-                            </a>
-                        ) : (
-                            <a className="nav-link active" href="/login">
-                                Login
-                            </a>
-                        )}
+                        <a className="nav-link active" href="/dashboard">
+                            Dashboard
+                        </a>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
 );
-
-Nav.getInitialProps = async function(ctx) {
-    const { user_id } = cookies(ctx);
-
-    if (user_id === null && user_id === undefined) {
-        return {
-            logged_in: false
-        };
-    } else {
-        return {
-            user_id: user_id,
-
-            logged_in: true
-        };
-    }
-};
 
 export default Nav;
