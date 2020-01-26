@@ -95,6 +95,7 @@ app.prepare().then(() => {
 });
 
 function isAuthenticated(req, res, next) {
-    if (req.cookies.code && req.cookies.code !== undefined) return next();
+    if (req.cookies.access_token && req.cookies.access_token !== undefined)
+        return next();
     res.redirect("/login");
 }
