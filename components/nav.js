@@ -1,6 +1,5 @@
 import React from "react";
-import cookies from "next-cookies";
-const Nav = props => (
+const Nav = () => (
     <nav className="navbar navbar-dark navbar-expand-md" id="navbar">
         <div className="container">
             <a
@@ -45,7 +44,10 @@ const Nav = props => (
                         role="presentation"
                         id="invite-btn"
                     >
-                        <a className="nav-link active" href="/dashboard">
+                        <a
+                            className="nav-link active"
+                            href="https://dash.gaminggeek.space"
+                        >
                             Dashboard
                         </a>
                     </li>

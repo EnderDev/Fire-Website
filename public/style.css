@@ -186,21 +186,6 @@ table {
     font-size: 18pt;
 }
 
-.card {
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    background-color: #151515;
-    padding: 15px;
-}
-
-.card span {
-    background: -webkit-linear-gradient(25deg, #f04e33, #c52035);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    font-weight: bold;
-}
-
 .about-text {
     text-align: center;
     background-color: #151515;
@@ -211,72 +196,4 @@ table {
     background: -webkit-linear-gradient(25deg, #f04e33, #c52035);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-}
-
-.progress-bar {
-    background: -webkit-linear-gradient(25deg, #f04e33, #c52035);
-}
-
-.progress {
-    background: #202020;
-}
-
-.last-members {
-    text-align: center;
-    padding: 15px;
-}
-
-.tbl-grey-text {
-    color: #aaa;
-}
-
-.custom-buttons {
-    list-style: none;
-    text-align: center;
-    padding: 0px;
-}
-
-.db-buttons {
-    padding-top: 10px;
-    padding-bottom: 10px;
-    margin: 10px;
-    background: #202020;
-    text-align: center;
-}
-
-.db-buttons:hover {
-    background: -webkit-linear-gradient(25deg, #f04e33, #c52035);
-}
-
-.db-buttons a {
-    color: #fff;
-}
-
-.db-buttons a:hover {
-    text-decoration: none;
-}
-
-.custom-button {
-    padding-top: 10px;
-    padding-bottom: 10px;
-    margin: 10px;
-    background: #202020;
-}
-
-.custom-button:hover {
-    background: -webkit-linear-gradient(25deg, #f04e33, #c52035);
-}
-
-.custom-buttons a {
-    color: #fff;
-}
-
-.custom-buttons a:hover {
-    text-decoration: none;
-}
-
-.user-icon {
-    height: 25px;
-    margin-right: 5px;
-    border-radius: 50%;
 }
