@@ -23,7 +23,24 @@ const Head = props => (
             href="https://use.fontawesome.com/releases/v5.7.1/css/all.css"
         />
         <link rel="stylesheet" href="/style.css" />
+          <script
+            async
+            src={`https://www.googletagmanager.com/gtag/js?id=UA-154645451-2`}
+          />
+          <script
+            dangerouslySetInnerHTML={{
+              __html: `
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'UA-154645451-2', {
+              page_path: window.location.pathname,
+            });
+          `,
+            }}
+          />
     </Heads>
+    
 );
 
 export default Head;
