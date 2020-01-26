@@ -21,14 +21,9 @@ const Guild = props => {
                                 className={"row d-flex justify-content-center "}
                             >
                                 <div className={"col-md"}>
-                                    <strong>Total:</strong>
+                                    <strong>Members:</strong>
                                     <br />
                                     <span>{props.guild.total}</span>
-                                </div>
-                                <div className={"col-md"}>
-                                    <strong>Channels:</strong>
-                                    <br />
-                                    <span>{props.guild.channelcount}</span>
                                 </div>
                                 <div className={"col-md"}>
                                     <strong>Humans:</strong>
@@ -36,14 +31,19 @@ const Guild = props => {
                                     <span>{props.guild.humans}</span>
                                 </div>
                                 <div className={"col-md"}>
+                                    <strong>Bots:</strong>
+                                    <br />
+                                    <span>{props.guild.bots}</span>
+                                </div>
+                                <div className={"col-md"}>
                                     <strong>Roles:</strong>
                                     <br />
                                     <span>{props.guild.rolecount}</span>
                                 </div>
                                 <div className={"col-md"}>
-                                    <strong>Bots:</strong>
+                                    <strong>Channels:</strong>
                                     <br />
-                                    <span>{props.guild.bots}</span>
+                                    <span>{props.guild.channelcount}</span>
                                 </div>
                             </div>
                             <br />
