@@ -1,5 +1,4 @@
 import React from "react";
-import "../public/style.css";
 import cookies from "next-cookies";
 const Nav = props => (
     <nav className="navbar navbar-dark navbar-expand-md" id="navbar">
