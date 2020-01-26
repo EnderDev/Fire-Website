@@ -10,11 +10,17 @@ const cookieParser = require("cookie-parser");
 const server = express();
 server.use(cookieParser());
 
+if (dev) {
+    redirect_uri = "http://localhost:3000";
+} else {
+    redirect_uri = "https://fire.gaminggeek.space";
+}
+
 app.prepare().then(() => {
     server.get("/login", (req, res) => {
         if (req.cookies.access_token) res.redirect("/dashboard");
         res.redirect(
-            `https://discordapp.com/oauth2/authorize?client_id=444871677176709141&redirect_uri=https://fire.gaminggeek.space/dashboard/login&response_type=code&scope=identify%20email%20guilds%20guilds.join`
+            `https://discordapp.com/oauth2/authorize?client_id=444871677176709141&redirect_uri=${redirect_uri}/dashboard/login&response_type=code&scope=identify%20email%20guilds%20guilds.join`
         );
     });
 
@@ -42,6 +48,7 @@ app.prepare().then(() => {
             `https://api.gaminggeek.dev/oauth/@me/${token.access_token}`
         );
         const userData = await userFetch.json();
+        console.log(token);
         if (!userData.guilds) res.redirect("https://inv.wtf/fire");
         res.cookie("access_token", token.access_token);
         res.cookie("user_id", userData.user.id);

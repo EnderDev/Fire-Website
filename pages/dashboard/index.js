@@ -32,14 +32,13 @@ const Dashboard = props => {
                                         {guild.name}
                                     </span>
                                     <p className="card-text"></p>
-                                    <div className={"custom-buttons"}>
+                                    <div className={"db-buttons"}>
                                         <a
                                             href={
                                                 guild.fire === "yes"
                                                     ? `/dashboard/guild/${guild.id}`
                                                     : `https://inv.wtf/fire?guild=${guild.id}`
                                             }
-                                            className="custom-button"
                                         >
                                             {guild.fire === "yes"
                                                 ? "Manage"

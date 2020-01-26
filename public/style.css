@@ -236,6 +236,26 @@ table {
     padding: 0px;
 }
 
+.db-buttons {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin: 10px;
+    background: #202020;
+    text-align: center;
+}
+
+.db-buttons:hover {
+    background: -webkit-linear-gradient(25deg, #f04e33, #c52035);
+}
+
+.db-buttons a {
+    color: #fff;
+}
+
+.db-buttons a:hover {
+    text-decoration: none;
+}
+
 .custom-button {
     padding-top: 10px;
     padding-bottom: 10px;
