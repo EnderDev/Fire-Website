@@ -19,6 +19,7 @@ app.prepare().then(() => {
     });
 
     server.get("/dashboard/login", async (req, res) => {
+        if (!req.query.code) res.redirect("/login");
         cookie = req.cookies;
         for (var prop in cookie) {
             if (!cookie.hasOwnProperty(prop)) {
