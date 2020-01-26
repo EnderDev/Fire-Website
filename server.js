@@ -10,7 +10,7 @@ const cookieParser = require("cookie-parser");
 const server = express();
 server.use(cookieParser());
 
-if (!dev) {
+if (dev) {
     redirect_uri = "http://localhost:3000";
 } else {
     redirect_uri = "https://fire.gaminggeek.space";
