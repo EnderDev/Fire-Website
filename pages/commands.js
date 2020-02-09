@@ -1,8 +1,9 @@
-import React, { useState } from "react";
+import React, {useState} from "react";
 import Head from "../components/head";
 import Nav from "../components/nav";
 import fetch from "isomorphic-unfetch";
-import { useRouter } from "next/router";
+import {useRouter} from "next/router";
+import Footer from "../components/footer";
 
 const Commands = props => {
     const [currentCategory, changeCategory] = useState(0);
@@ -187,6 +188,7 @@ const Commands = props => {
                     </div>
                 </div>
             </div>
+            <Footer/>
         </div>
     );
 };

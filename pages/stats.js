@@ -2,6 +2,7 @@ import React from "react";
 import Head from "../components/head";
 import Nav from "../components/nav";
 import fetch from "isomorphic-unfetch";
+import Footer from "../components/footer";
 
 const Stats = props => {
     return (
@@ -50,6 +51,7 @@ const Stats = props => {
                     </div>
                 </div>
             </div>
+            <Footer/>
         </div>
     );
 };

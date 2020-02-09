@@ -1,6 +1,7 @@
 import React from "react";
 import Head from "../components/head";
 import Nav from "../components/nav";
+import Footer from "../components/footer";
 
 const Home = () => {
     return (
@@ -46,7 +47,7 @@ const Home = () => {
                         <div className={"col-md bot-info-box"}>
                             <p>
                                 <span>Moderation</span>
-                                <br />
+                                <br/>
                                 We know how hard moderation can be, so we try
                                 make things easy. With commands to mute, block
                                 (per-channel mute), kick and ban, moderation is
@@ -54,9 +55,20 @@ const Home = () => {
                             </p>
                         </div>
                     </div>
+                    <br/>
+                    <div className={"row d-flex justify-content-center align-items-center"}>
+                        <div className={"col-md"}>
+                            <iframe src={"https://api.gaminggeek.dev/discovery/564052798044504084"}
+                                    style={{height: "325px;", width: "257px;"}} allowtransparency="true"
+                                    frameBorder={0}/>
+                        </div>
+                    </div>
                 </div>
             </div>
+            <Footer/>
         </div>
+
+
     );
 };
 

@@ -1,6 +1,7 @@
 import React from "react";
 import Head from "../components/head";
 import Nav from "../components/nav";
+import Footer from "../components/footer";
 
 const About = () => {
     return (
@@ -17,16 +18,17 @@ const About = () => {
                             >
                                 <strong>Fire</strong> is made by{" "}
                                 <strong>Geek#8405.</strong>
-                                <br />
+                                <br/>
                                 <strong>Website</strong> is made by{" "}
                                 <strong>Nystrex#6606</strong>
-                                <br />
+                                <br/>
                                 All rights reserved. © 2020
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+            <Footer/>
         </div>
     );
 };
