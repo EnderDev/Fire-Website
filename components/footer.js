@@ -5,7 +5,7 @@ const Footer = () => (
                 © 2020 <span className="fire">Fire Bot</span>. All Rights Reserved.
             </div>
             <div>
-                Made with ♥ by <a href="https://nystrex.com"><span className="fire">Hadi Ka (Nystrex)</span></a>.
+                Website Made by <a href="https://nystrex.com"><span className="fire">Hadi Ka (Nystrex)</span></a>.
             </div>
         </div>
     </footer>
